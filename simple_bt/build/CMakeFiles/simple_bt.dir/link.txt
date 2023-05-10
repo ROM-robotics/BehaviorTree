@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/simple_bt.dir/simple_bt.cpp.o -o simple_bt  -Wl,-rpath,/usr/local/lib /usr/local/lib/libbehaviortree_cpp.so 

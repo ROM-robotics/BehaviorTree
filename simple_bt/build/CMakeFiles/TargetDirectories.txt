@@ -1,3 +1,0 @@
-/home/mr_robot/ros2/ros2_ws/src/rom2109/BehaviorTree/simple_bt/build/CMakeFiles/simple_bt.dir
-/home/mr_robot/ros2/ros2_ws/src/rom2109/BehaviorTree/simple_bt/build/CMakeFiles/edit_cache.dir
-/home/mr_robot/ros2/ros2_ws/src/rom2109/BehaviorTree/simple_bt/build/CMakeFiles/rebuild_cache.dir

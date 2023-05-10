@@ -1,14 +1,10 @@
+#####
+clone to your ROS2 workspace
 git clone git@github.com:BehaviorTree/BehaviorTree.CPP.git
-
-sudo apt install libzmq3-dev libboost-dev
-
-mkdir build; cd build; cmake ..; make; sudo make install
-
-# your path
-mkdir simple_bt; cd simple_bt
-code .
+colcon build 
 
 
+ros2 pkg create test --build--type ament_cmake --dependencies behaviortree_cpp rclcpp
+colcon build
+ 
 
-
-# BehaviorTree
