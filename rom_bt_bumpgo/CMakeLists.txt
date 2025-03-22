@@ -29,44 +29,44 @@ set(dependencies
     ament_index_cpp
 )
 
-# include_directories(include ${ZMQ_INCLUDE_DIRS})
+include_directories(include ${ZMQ_INCLUDE_DIRS})
 
-# add_library(br2_forward_bt_node SHARED src/br2_bt_bumpgo/Forward.cpp)
-# add_library(br2_back_bt_node SHARED src/br2_bt_bumpgo/Back.cpp)
-# add_library(br2_turn_bt_node SHARED src/br2_bt_bumpgo/Turn.cpp)
-# add_library(br2_is_obstacle_bt_node SHARED src/br2_bt_bumpgo/IsObstacle.cpp)
+add_library(rom_forward_bt_node SHARED src/Forward.cpp)
+add_library(rom_back_bt_node SHARED src/Back.cpp)
+add_library(rom_turn_bt_node SHARED src/Turn.cpp)
+add_library(rom_is_obstacle_bt_node SHARED src/IsObstacle.cpp)
 
-# list(APPEND plugin_libs
-#   br2_forward_bt_node
-#   br2_back_bt_node
-#   br2_turn_bt_node
-#   br2_is_obstacle_bt_node
-# )
+list(APPEND plugin_libs
+  rom_forward_bt_node
+  rom_back_bt_node
+  rom_turn_bt_node
+  rom_is_obstacle_bt_node
+)
 
-# foreach(bt_plugin ${plugin_libs})
-#   ament_target_dependencies(${bt_plugin} ${dependencies})
-#   target_compile_definitions(${bt_plugin} PRIVATE BT_PLUGIN_EXPORT)
-# endforeach()
+foreach(bt_plugin ${plugin_libs})
+  ament_target_dependencies(${bt_plugin} ${dependencies})
+  target_compile_definitions(${bt_plugin} PRIVATE BT_PLUGIN_EXPORT)
+endforeach()
 
-# add_executable(bt_bumpgo src/bt_bumpgo_main.cpp)
-# ament_target_dependencies(bt_bumpgo ${dependencies})
-# target_link_libraries(bt_bumpgo ${ZMQ_LIBRARIES})
+add_executable(bt_bumpgo src/main_bumpgo.cpp)
+ament_target_dependencies(bt_bumpgo ${dependencies})
+target_link_libraries(bt_bumpgo ${ZMQ_LIBRARIES})
 
-# install(TARGETS
-#   ${plugin_libs}
-#   bt_bumpgo
-#   ARCHIVE DESTINATION lib
-#   LIBRARY DESTINATION lib
-#   RUNTIME DESTINATION lib/${PROJECT_NAME}
-# )
+install(TARGETS
+  ${plugin_libs}
+  bt_bumpgo
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
 
-# install(DIRECTORY include/
-#   DESTINATION include/
-# )
+install(DIRECTORY include/
+  DESTINATION include/
+)
 
-# install(DIRECTORY behavior_tree_xml
-#   DESTINATION share/${PROJECT_NAME}
-# )
+install(DIRECTORY behavior_tree_xml launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 
 if(BUILD_TESTING)
