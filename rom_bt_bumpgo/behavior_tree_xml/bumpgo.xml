@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="3" main_tree_to_execute="BehaviorTree">
+  <BehaviorTree ID="BehaviorTree">
+    <ReactiveSequence>
+      <Fallback>
+        <Inverter>
+          <IsObstacle distance="1.0"/>
+        </Inverter>
+        <Sequence>
+          <Back/>
+          <Turn/>
+        </Sequence>
+      </Fallback>
+      <Forward/>
+    </ReactiveSequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="Back"
+            editable="true"/>
+    <Action ID="Forward"
+            editable="true"/>
+    <Condition ID="IsObstacle"
+               editable="true">
+      <input_port name="distance"
+                  default="1.0">Distance to obstacle</input_port>
+    </Condition>
+    <Action ID="Turn"
+            editable="true"/>
+  </TreeNodesModel>
+
+</root>

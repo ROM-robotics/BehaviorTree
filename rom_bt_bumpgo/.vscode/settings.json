@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/mr_robot/devel_ws/install/rom_interfaces/local/lib/python3.10/dist-packages",
+        "/home/mr_robot/devel_ws/install/rom_commander_python/lib/python3.10/site-packages",
+        "/home/mr_robot/maintain_ws/install/cartographer_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/mr_robot/devel_ws/install/rom_interfaces/local/lib/python3.10/dist-packages",
+        "/home/mr_robot/devel_ws/install/rom_commander_python/lib/python3.10/site-packages",
+        "/home/mr_robot/maintain_ws/install/cartographer_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

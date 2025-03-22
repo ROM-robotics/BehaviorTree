@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/mr_robot/maintain_ws/install/rom_nav2_waypoint_follower/include/**",
+        "/home/mr_robot/maintain_ws/install/rom_nav2_velocity_smoother/include/**",
+        "/home/mr_robot/maintain_ws/install/rom_nav2_smoother/include/**",
+        "/home/mr_robot/maintain_ws/install/rom_nav2_planner/include/**",
+        "/home/mr_robot/maintain_ws/install/rom_nav2_controller/include/**",
+        "/home/mr_robot/maintain_ws/install/rom_nav2_collision_monitor/include/**",
+        "/home/mr_robot/maintain_ws/install/rom_nav2_bt_navigator/include/**",
+        "/home/mr_robot/maintain_ws/install/rom_nav2_behaviors/include/**",
+        "/home/mr_robot/maintain_ws/install/cartographer_rviz/include/**",
+        "/home/mr_robot/maintain_ws/install/cartographer_ros/include/**",
+        "/home/mr_robot/maintain_ws/install/cartographer_ros_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/mr_robot/devel_ws/src/rom_bt_bumpgo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
